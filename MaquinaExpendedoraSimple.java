@@ -10,8 +10,6 @@ public class MaquinaExpendedoraSimple {
     private String estacionOrigen;
     // El destino del billete
     private String estacionDestino;
-    // La ciudad donde va el tren
-    private String ciudadDestino;
 
     /**
      * Crea una maquina expendedora de billetes de tren con el 
@@ -23,8 +21,19 @@ public class MaquinaExpendedoraSimple {
         balanceClienteActual = 0;
         totalDineroAcumulado = 0;
         estacionOrigen = "Leon";
-        estacionDestino = "Leon";
-        ciudadDestino = "La Robla";
+        estacionDestino = "Leon / La Robla";
+    }
+    
+    /**
+     * Crea una maquina expendedora de billetes de tren con el 
+     * origen siempre en Leon y el destino y precio del billete variables
+     */
+    public MaquinaExpendedoraSimple(int precioDelBillete, String destino) {
+        precioBillete = precioDelBillete;
+        balanceClienteActual = 0;
+        totalDineroAcumulado = 0;
+        estacionOrigen = "Leon";
+        estacionDestino = destino;
     }
 
     /**
@@ -55,7 +64,7 @@ public class MaquinaExpendedoraSimple {
         // Simula la impresion de un billete
         System.out.println("##################");
         System.out.println("# Billete de tren:");
-        System.out.println("# De " + estacionOrigen + " a " + estacionDestino + " con destino en la ciudad de " + ciudadDestino);
+        System.out.println("# De " + estacionOrigen + " a " + estacionDestino);
         System.out.println("# " + precioBillete + " euros.");
         System.out.println("##################");
         System.out.println();
