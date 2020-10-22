@@ -50,6 +50,14 @@ public class MaquinaExpendedoraSimple {
         precioBillete = precioNuevoBillete;
 
     }
+    
+    /**
+     * Reduce el dinero del billete en una cantidad x introducida por
+     * el usuario
+     */
+    public void setDescuento(int descuentoBillete){
+        precioBillete -= descuentoBillete;
+    }
 
     /**
      * Devuelve el precio del billete
